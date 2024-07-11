@@ -59,9 +59,9 @@ function init_gear_sets()
 
     -- Waltz set (chr and vit)
     sets.precast.Waltz = {ammo="Yamarang",
-        head="Mummu Bonnet +2",neck="Unmoving Collar +1",ear1="Enchntr. Earring +1",ear2="Handler's Earring +1",
+        head="Mummu Bonnet +2",neck="Etoile Gorget",ear1="Enchntr. Earring +1",ear2="Sjofn Earring",
         body=gear.herculean_waltz_body,hands=gear.herculean_waltz_hands,ring1="Defending Ring",ring2="Valseur's Ring",
-        back="Toetapper Mantle",waist="Chaac Belt",legs="Dashing Subligar",feet=gear.herculean_waltz_feet}
+        back="Toetapper Mantle",waist="Chaac Belt",legs="Dashing Subligar",feet="Rawhide Boots"}
 		
 	sets.Self_Waltz = {head="Mummu Bonnet +2",body="Passion Jacket",ring1="Asklepian Ring"}
         
@@ -107,9 +107,9 @@ function init_gear_sets()
     -- Fast cast sets for spells
     
     sets.precast.FC = {ammo="Impatiens",
-		head=gear.herculean_fc_head,neck="Voltsurge Torque",ear1="Enchntr. Earring +1",ear2="Loquac. Earring",
+		head="Herculean Helm",neck="Voltsurge Torque",ear1="Enchntr. Earring +1",ear2="Loquac. Earring",
 		body="Dread Jupon",hands="Leyline Gloves",ring1="Lebeche Ring",ring2="Prolix Ring",
-		legs="Rawhide Trousers"}
+		legs="Rawhide Trousers",feet="Herculean Boots"}
 
     sets.precast.FC.Utsusemi = set_combine(sets.precast.FC, {neck="Magoraga Beads"})
 
@@ -117,9 +117,18 @@ function init_gear_sets()
     -- Weaponskill sets
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {ammo="Voluspa Tathlum",
-        head="Dampening Tam",neck="Asperity Necklace",ear1="Brutal Earring",ear2="Sherida Earring",
-        body="Adhemar Jacket +1",hands="Meg. Gloves +2",ring1="Ilabrat Ring",ring2="Regal Ring",
-        back=gear.wsd_jse_back,waist="Grunfeld Rope",legs="Samnuha Tights",feet=gear.herculean_wsd_feet}
+        head={ name="Lilitu Headpiece", augments={'STR+10','DEX+10','Attack+15','Weapon skill damage +3%',}},
+        body="Sayadio's Kaftan",
+        hands="Regal Gloves",
+        legs="Herculean Trousers",
+        feet="Herculean Boots",
+        neck="Etoile Gorget",
+        waist="Svelt. Gouriz +1",
+        left_ear="Odr Earring",
+        right_ear="Phawaylla Earring",
+        left_ring="Patricius Ring",
+        right_ring="Garrulous Ring",
+        back="Bleating Mantle",}
 
 	sets.precast.WS.SomeAcc = set_combine(sets.precast.WS, {neck="Combatant's Torque"})
 	sets.precast.WS.Acc = set_combine(sets.precast.WS, {ammo="C. Palug Stone",neck="Combatant's Torque",ear1="Telos Earring",body="Meg. Cuirie +2",waist="Olseni Belt",legs="Meg. Chausses +2",feet="Malignance Boots"})
@@ -188,10 +197,19 @@ function init_gear_sets()
 
     -- Idle sets
 
-    sets.idle = {ammo="Staunch Tathlum +1",
-        head="Dampening Tam",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Sanare Earring",
-        body="Meg. Cuirie +2",hands="Malignance Gloves",ring1="Defending Ring",ring2="Sheltered Ring",
-        back="Moonlight Cape",waist="Flume Belt +1",legs=gear.herculean_dt_legs,feet="Malignance Boots"}
+    sets.idle = {ammo="Charis Feather",
+        head={ name="Lilitu Headpiece", augments={'STR+10','DEX+10','Attack+15','Weapon skill damage +3%',}},
+        body="Emet Harness",
+        hands={ name="Leyline Gloves", augments={'Accuracy+14','Mag. Acc.+13','"Mag.Atk.Bns."+13','"Fast Cast"+2',}},
+        legs="Herculean Trousers",
+        feet="Herculean Boots",
+        neck="Oneiros Torque",
+        waist="Flume Belt",
+        left_ear="Odr Earring",
+        right_ear="Hibern. Earring",
+        left_ring="Patricius Ring",
+        right_ring="Garrulous Ring",
+        back="Fugacity Mantle +1",}
 		
     sets.idle.Sphere = set_combine(sets.idle, {body="Mekosu. Harness"})
     
@@ -222,10 +240,19 @@ function init_gear_sets()
     -- EG: sets.engaged.Dagger.Accuracy.Evasion
     
     -- Normal melee group
-    sets.engaged = {ammo="Yamarang",
-        head="Dampening Tam",neck="Anu Torque",ear1="Brutal Earring",ear2="Sherida Earring",
-        body="Adhemar Jacket +1",hands="Adhemar Wrist. +1",ring1="Gere Ring",ring2="Epona's Ring",
-        back=gear.stp_jse_back,waist="Windbuffet Belt +1",legs="Samnuha Tights",feet=gear.herculean_ta_feet}
+    sets.engaged = {ammo="Charis Feather",
+        head="Heidrek Mask",
+        body="Heidrek Harness",
+        hands="Heidrek Gloves",
+        legs="Heidrek Brais",
+        feet="Heidrek Boots",
+        neck="Etoile Gorget",
+        waist="Shetal Stone",
+        left_ear="Odr Earring",
+        right_ear="Phawaylla Earring",
+        left_ring="Patricius Ring",
+        right_ring="Garrulous Ring",
+        back="Bleating Mantle",}
 		
     sets.engaged.DTLite = {ammo="Yamarang",
         head="Dampening Tam",neck="Loricate Torque +1",ear1="Brutal Earring",ear2="Sherida Earring",
